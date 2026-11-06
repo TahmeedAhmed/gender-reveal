@@ -38,6 +38,15 @@ function App() {
   const handlePasswordSubmit = (e) => {
     e.preventDefault()
     if (password === GHANA) {
+      // 🎵 Unblock browser audio protection on user click interaction
+      if (typeof audioContext !== 'undefined' && audioContext && audioContext.state === 'suspended') {
+        audioContext.resume();
+      } else if (typeof audioCtx !== 'undefined' && audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      } else if (typeof ctx !== 'undefined' && ctx && ctx.state === 'suspended') {
+        ctx.resume();
+      }
+
       setLoggedIn(true)         // VIP access flag
       setPasswordError(false)
       setStage('welcome')       // Advance to welcome screen
@@ -46,7 +55,16 @@ function App() {
     }
   }
 
+
   const handleGuestLogin = () => {
+    // 🎵 Unblock browser audio protection on user click interaction
+    if (typeof audioContext !== 'undefined' && audioContext && audioContext.state === 'suspended') {
+      audioContext.resume();
+    } else if (typeof audioCtx !== 'undefined' && audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    } else if (typeof ctx !== 'undefined' && ctx && ctx.state === 'suspended') {
+      ctx.resume();
+    }
     setLoggedIn(false)          // Guest access flag
     setPasswordError(false)
     setStage('welcome')         // Advance to welcome screen
