@@ -8,10 +8,10 @@ export const questions = [
   { 
     question: 'Which photo is of Tahmeed?', 
     options: [
-      'us/tahmeed-1.png', 
-      'us/tahmeed-2.png', 
-      'us/tahmeed-3.png', 
-      'us/tahmeed-4.png'
+      'us/tahmeed-1.jpeg', 
+      'us/tahmeed-2.jpeg', 
+      'us/tahmeed-3.jpeg', 
+      'us/tahmeed-4.jpeg'
     ], 
     correct: 1, // 0 = top left, 1 = top right, 2 = bottom left and 3 = bottom right
     isImageOptions: true // Flag to trigger image rendering in the UI
@@ -24,10 +24,10 @@ export const questions = [
   { 
     question: 'Which one is Farhana?', 
     options: [
-      'us/farhana-1.png', 
-      'us/farhana-2.png', 
-      'us/farhana-3.png', 
-      'us/farhana-4.png'
+      'us/farhana-1.jpeg', 
+      'us/farhana-2.jpeg', 
+      'us/farhana-3.jpeg', 
+      'us/farhana-4.jpeg'
     ], 
     correct: 3, // 0 = top left, 1 = top right, 2 = bottom left and 3 = bottom right
     isImageOptions: true // Flag to trigger image rendering in the UI
@@ -38,11 +38,11 @@ export const questions = [
 
 // Replace `src` with your own files from /public, e.g. '/scans/scan-1.jpg'.
 export const journey = [
-  { date: 'The First Scan', title: 'Week 7', src: 'scans/scan-1.png', caption: '6th August' },
-  { date: 'The 2nd Scan', title: 'Week 12', src: 'scans/scan-2.png', caption: '11th September' },
-  { date: 'The 3rd Scan', title: 'Week 16', src: 'scans/scan-3.png', caption: '8th October' },
-  { date: 'The Final Scan', title: 'Week 20', src: 'scans/scan-4.png', caption: '2nd November' }
+  { date: 'The First Scan', title: 'Week 7', src: 'scans/scan-1.jpeg', caption: '6th August' },
+  { date: 'The 2nd Scan', title: 'Week 12', src: 'scans/scan-2.jpeg', caption: '11th September' },
+  { date: 'The 3rd Scan', title: 'Week 16', src: 'scans/scan-3.jpeg', caption: '8th October' },
+  { date: 'The Final Scan', title: 'Week 20', src: 'scans/scan-4.jpeg', caption: '2nd November' }
 ]
 
 // Replace with your final chosen image, e.g. '/final-reveal.jpg'.
-export const finalImage = 'final-reveal.png'
+export const finalImage = 'final-reveal.jpeg'
