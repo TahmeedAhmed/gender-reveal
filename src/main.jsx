@@ -35,6 +35,34 @@ function App() {
 
   useEffect(() => () => { soundTimers.current.forEach(clearTimeout); clearTimeout(revealTimer.current) }, [])
 
+    // 🌟 NEW: Add this third useEffect block right here to preload your images
+    useEffect(() => {
+      // This array matches your folder paths and file names exactly!
+      const imagesToPreload = [
+        'scans/scan-1.jpeg', 
+        'scans/scan-2.jpeg',
+        'scans/scan-3.jpeg',
+        'scans/scan-4.jpeg',
+        'us/farhana-1.jpeg',
+        'us/farhana-2.jpeg',
+        'us/farhana-3.jpeg',
+        'us/farhana-4.jpeg',
+        'us/tahmeed-1.jpeg',
+        'us/tahmeed-2.jpeg',
+        'us/tahmeed-3.jpeg',
+        'us/tahmeed-4.jpeg',
+        'final-reveal.jpeg'
+      ];
+  
+      imagesToPreload.forEach((imagePath) => {
+        const img = new Image();
+        // Combines your GitHub base subfolder path with the filename safely
+        img.src = `${import.meta.env.BASE_URL || ''}${imagePath}`;
+      });
+    }, []);
+  
+
+
   const handlePasswordSubmit = (e) => {
     e.preventDefault()
     if (password === GHANA) {
